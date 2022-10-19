@@ -55,7 +55,7 @@ nav_order: 4
 
     [Статья](https://link.springer.com/article/10.1023/A:1014849028575)
 
-    Реализовать алгоритм из данной статьи, сравнить его с 'scipy.minimize(method=’Nelder-Mead’)' на стандартных функциях (см. Таблицу в статье)
+    Реализовать алгоритм из данной статьи, сравнить его с ''scipy.minimize(method=’Nelder-Mead’)'' на стандартных функциях (см. Таблицу в статье)
 
 1. **Distributed convex optimization with limited communications.**
     
