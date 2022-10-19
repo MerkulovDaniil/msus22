@@ -8,7 +8,10 @@ nav_order: 4
     В ней предложен оптимальный метод решения седловых задач с разными константами сильной выпуклости и вогнутости. На примере какой-нибудь небилинейной выпукло-вогнутой задачи исследуйте как сходится предложенный метод. Насколько теоретические оценки скорости сходимости соответствуют практическим наблюдениям? P.S. Пример небилинейной седловой задачи: 
     
     $$
-    \min_x \max_y \mu_x \|x\|_2^2 + \langle x^2, y\rangle  - \mu_y \|y\|_2^2\text{, где } x^2 = (x_1^2,\ldots,x_n^2)\text{ - вектор с компонентами вида }x_i^2.
+    \begin{split}
+    \min_x \max_y \mu_x \|x\|_2^2 + \langle x^2, y\rangle  - \mu_y \|y\|_2^2 \\
+    \text{, где } x^2 = (x_1^2,\ldots,x_n^2)\text{ - вектор с компонентами вида }x_i^2.
+    \end{split}
     $$
 
 1. **Как на практике сходится оптимальный метод решения седловых билинейных задач.** (сложный - можно делать небольшой группой).
@@ -30,10 +33,12 @@ nav_order: 4
 
 1. **Градиентный клиппинг.** (сложный). 
     Посмотрите вот это [видео](http://www.mathnet.ru/php/seminars.phtml?option_lang=rus&presentid=35797). В различных моделях обучения возникают задачи стохастической оптимизации, в которых у градиентов имеются тяжелые хвосты. Для лучшей практической работы стандартных методов типа  SGD используется клиппирование (пробатченного) стохастического градиента. Такой проект мы делали летом со школьниками в Сируисе. В результате было сделано вот это
+    
     * [Лендинг](https://bigchallenges.ru/clipping) 
     * [GitHub](https://github.com/EugGolovanov/TorchClippedOptimizers) 
     * [PyPi](https://pypi.org/project/torch-clip/) 
     * [Флайер](https://www.overleaf.com/project/62d80dc6d1f5d958e839e580) 
+
     Оказывается, для выпуклых задач есть довольно симпатчиная математика, стоящая за всем этим ([ссылка](https://arxiv.org/pdf/2106.05958.pdf))
     Проект заключается в том, чтобы подобрать новые примеры (классы) задач обучения, на которых клиппированные методы работают лучше неклипированных.
 
@@ -49,11 +54,13 @@ nav_order: 4
 1. **A Convergent Variant of the Nelder–Mead Algorithm.**
 
     [Статья](https://link.springer.com/article/10.1023/A:1014849028575)
+
     Реализовать алгоритм из данной статьи, сравнить его с 'scipy.minimize(method=’Nelder-Mead’)' на стандартных функциях (см. Таблицу в статье)
 
 1. **Distributed convex optimization with limited communications.**
     
     [Статья](https://arxiv.org/pdf/1810.12457.pdf)
+
     Реализовать алгоритм DCDA предложенный в этой статье для задачи распределенной оптимизации, в которой необходимо вычислить минимум функции, когда факторы этой функции распределены по сети с учетом коммуникационных ограничений. Представьте себе сеть в виде графа, где каждый узел графа решает задачу выпуклой оптимизации, но все узлы имеют ограничение на передачу между соседями. Сравнить работу DCDA с ADMM.
 
 1. **Speeding up Convolutional Neural Networks with Low Rank Expansions**
@@ -65,9 +72,10 @@ nav_order: 4
 1. **Методы второго порядка для Physics-informed Neural Networks**
     В работе [1] было предложено решать граничные и начальные задачи для уравнений в частных производных и обыкновенных дифференциальных уравнений с использованием нейронных сетей. Решение приближается в виде нейронной сети, а веса выбираются так, чтобы норма невязки была минимальна в некотором наборе точек. Спустя 20 лет метод получил второе рождение в работе [2] (нейронные сети получили название Physics informed Neural Networks = PiNN) и с тех пор активно исследуется для различных прямых и обратных задач [3].
     Цель данного проекта состоит в том, чтобы проверить, можно ли использовать методы второго порядка, чтобы ускорить обучение (оптимизацию) PiNN. С вычислительной точки зрения возможность использовать Гессиан нейронной сети появляется из-за того, что автоматическое дифференцирование позволяет получить произведение гессиана (матрицы вторых производных) на произвольный вектор почти с такой же вычислительной сложностью как и градиент. Такое произведение может быть позже использовано, например, в методе сопряженных градиентов для того, чтобы получить оценку произведения обратного гессиана на градиент. Более подробно эта процедура описана в [4] и [5].
+
     Литература:
-    [1] — Lagaris IE, Likas A, Fotiadis DI. Artificial neural networks for solving ordinary and partial differential equations. IEEE transactions on neural networks. 1998 Sep;9(5):987-1000.
-    [2] — Raissi M, Perdikaris P, Karniadakis GE. Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. Journal of Computational physics. 2019 Feb 1;378:686-707.
-    [3] — Karniadakis GE, Kevrekidis IG, Lu L, Perdikaris P, Wang S, Yang L. Physics-informed machine learning. Nature Reviews Physics. 2021 Jun;3(6):422-40.
-    [4] — Byrd RH, Chin GM, Neveitt W, Nocedal J. On the use of stochastic hessian information in optimization methods for machine learning. SIAM Journal on Optimization. 2011 Jul 1;21(3):977-95.
-    [5], Section 6 — Bottou L, Curtis FE, Nocedal J. Optimization methods for large-scale machine learning. Siam Review. 2018;60(2):223-311.
+    * [1] — Lagaris IE, Likas A, Fotiadis DI. Artificial neural networks for solving ordinary and partial differential equations. IEEE transactions on neural networks. 1998 Sep;9(5):987-1000.
+    * [2] — Raissi M, Perdikaris P, Karniadakis GE. Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. Journal of Computational physics. 2019 Feb 1;378:686-707.
+    * [3] — Karniadakis GE, Kevrekidis IG, Lu L, Perdikaris P, Wang S, Yang L. Physics-informed machine learning. Nature Reviews Physics. 2021 Jun;3(6):422-40.
+    * [4] — Byrd RH, Chin GM, Neveitt W, Nocedal J. On the use of stochastic hessian information in optimization methods for machine learning. SIAM Journal on Optimization. 2011 Jul 1;21(3):977-95.
+    * [5], Section 6 — Bottou L, Curtis FE, Nocedal J. Optimization methods for large-scale machine learning. Siam Review. 2018;60(2):223-311.
