@@ -10,8 +10,8 @@ nav_order: 4
     
     $$
     \begin{split}
-    &\min_x \max_y \mu_x \|x\|_2^2 + \langle x^2, y\rangle  - \mu_y \|y\|_2^2 \\
-    &\text{, где } x^2 = (x_1^2,\ldots,x_n^2)\text{ - вектор с компонентами вида }x_i^2.
+    &\min_x \max_y \mu_x \|x\|_2^2 + \langle x^2, y\rangle  - \mu_y \|y\|_2^2, \\
+    &\text{где } x^2 = (x_1^2,\ldots,x_n^2)\text{ - вектор с компонентами вида }x_i^2.
     \end{split}
     $$
 
