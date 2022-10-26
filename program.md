@@ -59,8 +59,10 @@ nav_order: 2
 
 ### Занятие 11.
 [🤖 Ноутбук](https://colab.research.google.com/drive/1er9wIAwrM_VVvVanBlj3utUDouI6EdD-?usp=sharing). [▶️ YouTube](https://youtu.be/Lj3Brfp2jV0) 
+
 Квазиньютоновские методы.
 
 ### Занятие 12.
 [🤖 Ноутбук](https://colab.research.google.com/drive/1cb55P5ITAHT70GC5yQgUjnRyXslyaxgg?usp=sharing). [▶️ YouTube](https://youtu.be/5QEKAp3Ix9A) 
+
 Стохастические методы градиентного спуска.
