@@ -65,4 +65,7 @@ nav_order: 2
 ### Занятие 12.
 [🤖 Ноутбук](https://colab.research.google.com/drive/1cb55P5ITAHT70GC5yQgUjnRyXslyaxgg?usp=sharing). [▶️ YouTube](https://youtu.be/5QEKAp3Ix9A) 
 
-Стохастические методы градиентного спуска.
+### Занятия 13-14.
+[🤖 Ноутбук](https://colab.research.google.com/drive/1hqizVrTi0Bb3MFTKNRnJtY7iwiocHS_J?usp=sharing). [🤖 Ноутбук](https://colab.research.google.com/drive/1f8UudVS_s5nXqod7BByIq6zoWll6dVKV?usp=sharing). [▶️ YouTube](https://youtu.be/mlNN3Yz2brE) 
+
+Приложения: PCA, SVM, Повторение условий оптимальности.
