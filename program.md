@@ -69,3 +69,8 @@ nav_order: 2
 [🤖 Ноутбук](https://colab.research.google.com/drive/1hqizVrTi0Bb3MFTKNRnJtY7iwiocHS_J?usp=sharing). [🤖 Ноутбук](https://colab.research.google.com/drive/1f8UudVS_s5nXqod7BByIq6zoWll6dVKV?usp=sharing). [▶️ YouTube](https://youtu.be/mlNN3Yz2brE) 
 
 Приложения: PCA, SVM, Повторение условий оптимальности.
+
+### Занятия 15-16.
+[🤖 Ноутбук](https://colab.research.google.com/drive/1p-YV4etqlrb8Zoijf9hdJFk-lztAZ-DT?usp=sharing). [🤖 Ноутбук](https://colab.research.google.com/drive/1GrvJ-4t9jhursZa4QypOdD6IiwGc1oXp?usp=sharing). [🤖 Ноутбук](https://colab.research.google.com/drive/1ySKzzNoQmYM7wY0dqrs46XSAsjty6vHN?usp=sharing). [🤖 Ноутбук](https://colab.research.google.com/drive/1CIdbxSPUhkHdEnSZZt8Tncq3_vnkBCaL?usp=sharing). [📜 Записи 1](/files/lp.pdf). [📜 Записи 2](/files/fivt.pdf). [▶️ YouTube](https://youtu.be/Mn40WjWsbuQ) 
+
+Приложения: SVM, линейное программирование, оптимальный транспорт.
